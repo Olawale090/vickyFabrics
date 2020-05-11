@@ -1,0 +1,410 @@
+html,body{
+    margin:0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+@font-face{
+    src: url(../assets/fonts/Adam.otf);
+    font-family: Adam;
+}
+
+@font-face{
+    src: url(../assets/fonts/GeosansLight.ttf);
+    font-family: geosans;
+}
+
+@font-face{
+    src: url(../assets/fonts/Lato-Light.ttf);
+    font-family: lato;
+}
+
+@font-face{
+    src: url(../assets/fonts/bitcrusher\ condensed\ bd.ttf);
+    font-family: bitcrusher;
+}
+
+@font-face{
+    src: url(../assets/fonts/Antipasto-Pro-Regular-trial.ttf);
+    font-family: anti-pasto;
+}
+
+@font-face{
+    src: url(../assets/fonts/Examples\ of\ erosion.ttf);
+    font-family: erosion;
+}
+
+.nav_bar{
+    width:100%;
+    height:40px;
+    position:fixed;
+    top:0;
+    background-color: #41E894;
+    z-index: 2;
+}
+
+li.data{
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.data{
+    color:white;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline;
+    margin-left: 10px;
+}
+
+.left{
+    float: left;
+}
+
+.platform{
+    font-family: erosion;
+    margin-top: 10px;
+}
+
+.search{
+    width:300px;
+    height:35px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    margin-left: 10px;
+    margin-top:1.5px;
+    padding-left: 5px;
+    font-family: lato;
+    font-weight: bold;
+}
+
+.search::placeholder{
+    color: rgb(207, 205, 205);
+}
+
+.go_btn{
+    width: 55px;
+    height: 35px;
+    background-color: coral;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    margin-left: 0;
+    margin-top: 1.5px;
+}
+
+.right{
+    float:right;
+    margin-right:5px;
+}
+
+.newsletter{
+    margin-top: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.bus_icon,.menu_icon{
+    height:40px;
+    width:40px;
+}
+
+@media screen and (max-width:360px){
+    .search{
+        width: 100px;
+    }
+}
+
+
+.hero{
+    margin-top: 40px;
+    background-image: url('../assets/pics/woman-in-white-button-up-shirt-leaning-on-cloth-hanging-3984885.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 600px;
+}
+
+.hero_ul{
+    position: absolute;
+    top:35%;
+}
+
+li.bigger{
+    font-family: erosion;
+    font-size: 100px;
+    filter: drop-shadow(16px 16px 10px black);
+}
+
+.hero_label{
+    list-style:none;
+    text-align: center;
+    color: white;
+    margin-top:10px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 6px;
+}
+
+@media screen and (max-width:360px){
+    li.bigger{
+        font-size: 20px;
+    }
+}
+
+.sub_label{
+    width: 300px;
+    height: 40px;
+    background-color: coral;
+    font-family: geosans;
+    padding: 7px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.menu_icon:hover .side_menu{
+    opacity: 1;
+}
+
+.side_menu{
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    top: 40px;
+    right: 0;
+    background-color: whitesmoke;
+    z-index: 1;
+    list-style-type: none;
+    opacity: 0;
+}
+
+.menulist{
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-family: lato;
+}
+
+.tripple_card{
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    list-style: none;
+}
+
+.card{
+    width: 25%;
+    height: 300px;
+    background-color: whitesmoke;
+    margin-left: 85px;
+    margin-top: 100px;
+    float: left;
+    box-shadow: 2px 2px 10px 5px rgb(204, 204, 204);
+}
+
+.measurement,.cutting,.sewing{
+    background-image: url(../assets/pics/fabric-scissors-needle-needles-scissors-461035\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cutting{
+    background-image: url(../assets/pics/woman-in-red-long-sleeve-dress-holding-a-scissors-3738076\ \(1\).jpg);
+}
+
+.sewing{
+    background-image: url(../assets/pics/person-holding-sewing-machine-2973392\ \(1\).jpg);
+}
+
+.card_link_btn{
+    height:70px;
+    font-family: anti-pasto;
+    font-size: 30px;
+    text-align: center;
+    padding-top:20px;
+    margin-top: 0;
+    text-decoration: none;
+    background-color: coral;
+    color:white;
+}
+
+.article_topic{
+    width: 60%;
+    margin-top: 100px;
+    margin-left: 20%;
+    font-size: 100px;
+    font-family: bitcrusher;
+}
+
+.social_media{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    display: inline;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top:70px;
+    float: right;
+}
+
+.facebook,.instagram,.twitter,.pinterest{
+    background-image: url(../assets/icons/036-facebook.png);
+    background-size: cover;
+    object-fit: cover;
+}
+
+.instagram{
+    background-image: url(../assets/icons/029-instagram.png);
+}
+
+.twitter{
+    background-image: url(../assets/icons/008-twitter.png);
+}
+
+.pinterest{
+    background-image: url(../assets/icons/021-pinterest.png);
+}
+
+.author{
+    font-size: 10px;
+}
+
+
+
+section.article{
+    height: 900px;
+    width: 60%;
+    margin-top: 5px;
+    margin-left: 20%;
+    background-color: white;
+    font-size: 20px;
+    font-family: lato;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 10px;
+}
+
+blockquote{
+    background-color: rgb(236, 236, 236);
+    border-left: solid 10px coral;
+    padding: 10px;
+}
+
+.author{
+    margin-top: 40px;
+    margin-left: 20%;
+    height: 50px;
+    width: 300px;
+    background-color: whitesmoke;
+    font-size: 30px;
+    font-family: anti-pasto;
+    padding: 10px;
+    padding-top: 15px;
+}
+
+.comments_section{
+    width: 60%;
+    padding: 10px;
+    margin-left: 20%;
+    margin-top: 40px;
+    background-color: whitesmoke;
+}
+
+.comment_box{
+    width:100%;
+    height:150px;
+    padding: 10px;
+    font-family: lato;
+    font-size: larger;
+}
+
+.submit_btn{
+    width: 100px;
+    height: 40px;
+    background-color: #41E894;
+    color: white;
+    font-family: lato;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.commentators{
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+.comment_title{
+    font-family: geosans;
+    font-weight: bold;
+}
+
+.comment_name{
+    width: 100%;
+    height: 50px;
+    font-size: large;
+    background-color: #EEEEEE;
+    padding:5px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-family: lato;
+    font-weight: bold;
+}
+
+.time{
+    list-style: none;
+    font-size: small;
+    color: coral;
+}
+
+.comment_post{
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    font-family: lato;
+}
+
+.blog_footer{
+    width: 100%;
+    height: 400px;
+    background-color: whitesmoke;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.blog_footer>li{
+
+    margin-top: 10px;
+    list-style: none;
+}
+
+.footer{
+    width: 25%;
+    height: 300px;
+    margin-top: 70px;
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+    font-family: lato;
+    font-weight: bold;
+    line-height: 50px;
+    list-style:none;
+}
+
+.footer>a{
+    display: block;
+    color: black;
+}

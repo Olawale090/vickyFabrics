@@ -1,0 +1,37 @@
+body{
+    background-image: url('../../assets/pics/woman-in-white-button-up-shirt-wearing-black-framed-3984889\ \(1\).jpg');
+    background-size: cover;
+    background-color: rgb(32, 32, 32);
+    background-blend-mode: multiply;
+}
+
+.form_block{
+    position: absolute;
+    width: 40%;
+    margin-left: 30%;
+    height: 100%;
+    padding-top: 200px;
+}
+
+.signup_news{
+    margin-left: 180px;
+    color: white;
+    font-size: 30px;
+    font-family: erosion;
+}
+
+input{
+    width: 60%;
+    height: 40px;
+    margin-left: 20%;
+    margin-top: 5px;
+    border-radius: 5px;
+    border:solid 1px gray;
+    padding-left: 5px;
+}
+.submit{
+    background-color: #41E894;
+    border: none;
+    color:white;
+    font-size: 15px;
+}

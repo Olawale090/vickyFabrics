@@ -1,0 +1,43 @@
+.mini{
+    height: 400px;
+    background-color: rgb(92, 92, 92);
+    background-image: url("../../assets/pics/person-holding-sewing-machine-2973392\ \(1\).jpg");
+    background-position: 0 -600px;
+    background-blend-mode: multiply;
+    padding-top: 100px;
+}
+
+.mini_content{
+    width: 100%;
+    font-family: erosion;
+    font-size:80px;
+    text-align: center;
+    color: coral;
+    margin-top: 300pxj;
+}
+
+.subtitle{
+    color: white;
+    font-family: lato;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.products{
+    color:white;
+    background-color:rgb(65, 118, 232);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: lato;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+.techniques{
+    background-image: url('../../assets/pics/woman-in-red-long-sleeve-dress-holding-a-scissors-3738076\ \(1\).jpg');
+}
