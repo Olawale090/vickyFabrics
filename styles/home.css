@@ -45,6 +45,14 @@ html,body{
     z-index: 2;
 }
 
+@media screen and (max-width:360px){
+    .nav_bar{
+        height: 30px;
+        padding-top: 2.5px;
+        padding-right: 5px;
+    }
+}
+
 li.data{
     list-style-type: none;
     margin-top: 5px;
@@ -64,8 +72,15 @@ li.data{
 
 .platform{
     font-family: erosion;
-    margin-top: 10px;
+    padding-top: 3px;
 }
+
+@media screen and (max-width:360px){
+    .platform{
+        display: none;
+    }
+}
+
 
 .search{
     width:300px;
@@ -84,10 +99,20 @@ li.data{
     color: rgb(207, 205, 205);
 }
 
+@media screen and (max-width:360px){
+    input.search{
+        height: 27px;
+        width: 200px;
+        margin-top: -1.5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+}
+
 .go_btn{
     width: 55px;
     height: 35px;
-    background-color: coral;
+    background-color: #ff7f50;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 5px;
@@ -97,13 +122,28 @@ li.data{
     margin-top: 1.5px;
 }
 
+@media screen and (max-width:360px){
+    .go_btn{
+        height: 27px;
+        margin-top: -1.5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 3px;
+    }
+}
+
 .right{
     float:right;
     margin-right:5px;
 }
 
-.newsletter{
+.newsletter, .measurement_navlink, .cutting_navlink, .trends_navlink{
     margin-top: 5px;
+}
+
+@media screen  and (max-width:360px){
+    .newsletter, .measurement_navlink, .cutting_navlink, .trends_navlink{
+        display: none;
+    }
 }
 
 a{
@@ -115,9 +155,33 @@ a{
     width:40px;
 }
 
+.menu_icon{
+    display: inline;
+}
+
+@media screen and (max-width:360px){
+    .bus_icon,.menu_icon{
+        height: 22px;
+        width: 22px; 
+    }
+
+    .menu_icon{
+        margin-right: 300px;
+        z-index: 3;
+    }
+}
+
 @media screen and (max-width:360px){
     .search{
         width: 100px;
+    }
+
+    .go_btn{
+        width: 50px;
+    }
+
+    .right{
+        margin-right: 0;
     }
 }
 
@@ -130,6 +194,14 @@ a{
     height: 600px;
 }
 
+@media screen and (max-width:360px){
+    .hero{
+        background-position: -200px 0;
+        height: 400px;
+        margin-top: 30px;
+    }
+}
+
 .hero_ul{
     position: absolute;
     top:35%;
@@ -139,6 +211,17 @@ li.bigger{
     font-family: erosion;
     font-size: 100px;
     filter: drop-shadow(16px 16px 10px black);
+}
+
+@media screen and (max-width:360px){
+
+    .hero_ul{
+        top: 40%;
+    }
+
+    li.bigger{
+        font-size: 20%;
+    }
 }
 
 .hero_label{
@@ -153,7 +236,7 @@ li.bigger{
 
 @media screen and (max-width:360px){
     li.bigger{
-        font-size: 20px;
+        font-size: 40px;
     }
 }
 
@@ -167,30 +250,48 @@ li.bigger{
     font-weight: bold;
 }
 
-.menu_icon:hover .side_menu{
-    opacity: 1;
+@media screen and (max-width:360px){
+    .sub_label{
+        height: 35px;
+    }
 }
 
 .side_menu{
     position: absolute;
-    width: 30%;
-    height: 90%;
-    top: 40px;
-    right: 0;
+    width: 25%;
+    height: 30%;
+    top: 30px;
+    right: 0.5%;
     background-color: whitesmoke;
     z-index: 1;
     list-style-type: none;
     opacity: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media screen and (max-width:360px){
+    .side_menu{
+        margin-right: 0;
+        width: 100%;
+        height: 75%;
+        text-align: center;
+    }
 }
 
 .menulist{
-    padding: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin-top: 0;
+    width: 100%;
+    margin-left: 10px;
     color: black;
     font-size: 20px;
     text-align: center;
     font-family: lato;
+    transition: 0.3s;
+}
+
+.menulist:hover{
+    color: #41E894;
 }
 
 .tripple_card{
@@ -198,6 +299,12 @@ li.bigger{
     height: 500px;
     background-color: white;
     list-style: none;
+}
+
+@media screen  and (max-width:360px){
+    .tripple_card{
+        height: 1100px;
+    }
 }
 
 .card{
@@ -208,6 +315,15 @@ li.bigger{
     margin-top: 100px;
     float: left;
     box-shadow: 2px 2px 10px 5px rgb(204, 204, 204);
+}
+
+@media screen and (max-width:360px){
+    .card{
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .measurement,.cutting,.sewing{
@@ -234,6 +350,21 @@ li.bigger{
     text-decoration: none;
     background-color: coral;
     color:white;
+}
+
+@media screen and (max-width:360px){
+    .card_link_btn{
+        float: right;
+    }
+
+    .measurement_link{
+        margin-top: -800px;
+        z-index: 2;
+    }
+
+    .cutting_link{
+        margin-top: -400px;
+    }
 }
 
 .article_topic{
@@ -278,7 +409,22 @@ li.bigger{
     font-size: 10px;
 }
 
+@media screen and (max-width:360px){
+    .article_topic{
+        font-size: 50px;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 200px;
+    }
 
+    .social_media{
+        display: block;
+        margin-top: 0;
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
 
 section.article{
     height: 900px;
@@ -293,10 +439,25 @@ section.article{
     padding: 10px;
 }
 
+@media screen and (max-width:360px){
+    section.article{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 50px;
+    }
+}
+
 blockquote{
     background-color: rgb(236, 236, 236);
     border-left: solid 10px coral;
     padding: 10px;
+}
+
+@media screen and (max-width:360px){
+    blockquote{
+        width: 95%;
+        margin-left: 2.5%;
+    }
 }
 
 .author{
@@ -311,12 +472,26 @@ blockquote{
     padding-top: 15px;
 }
 
+@media screen and (max-width:360px){
+    .author{
+        margin-left: 2%;
+        margin-top: 1350px;
+    }
+}
+
 .comments_section{
     width: 60%;
     padding: 10px;
     margin-left: 20%;
     margin-top: 40px;
     background-color: whitesmoke;
+}
+
+@media screen and (max-width:360px){
+    .comments_section{
+        width: 95%;
+        margin-left: 2.5%;
+    }
 }
 
 .comment_box{
@@ -342,7 +517,10 @@ blockquote{
     width: 100%;
     margin-top: 20px;
     background-color: white;
-    padding: 10px;
+    padding-top: 2.5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 
 .comment_title{
@@ -407,4 +585,12 @@ blockquote{
 .footer>a{
     display: block;
     color: black;
+}
+
+@media screen and (max-width:360px){
+
+    .blog_footer{
+        display: none;
+    }
+
 }
