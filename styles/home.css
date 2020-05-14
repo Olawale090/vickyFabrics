@@ -216,7 +216,7 @@ li.bigger{
 @media screen and (max-width:360px){
 
     .hero_ul{
-        top: 40%;
+        top: 200px;
     }
 
     li.bigger{
