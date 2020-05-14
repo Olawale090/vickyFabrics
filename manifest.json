@@ -42,6 +42,6 @@
     "start_url":"/index.htm",
     "background_color":"#41E894",
     "display":"standalone",
-    "scope":"/index.htm,links/advance_techniques/techniques.htm,links/cutting/cutting.htm,links/fashion_trends/fashion_trends.htm,links/measurement/measurement.htm, links/signup/signup.htm",
+    "scope":"/index.htm,/links/advance_techniques/techniques.htm,/links/cutting/cutting.htm,/links/fashion_trends/fashion_trends.htm,/links/measurement/measurement.htm, /links/signup/signup.htm",
     "theme_color":"#ff7f50"
 }
