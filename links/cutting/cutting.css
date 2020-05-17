@@ -1,3 +1,9 @@
+@media screen and (max-width:360px){
+    .article_topic{
+        margin-top: 40px;
+    }
+}
+
 .mini{
     height: 400px;
     background-color: rgb(92, 92, 92);
@@ -14,6 +20,12 @@
     text-align: center;
     color: coral;
     margin-top: 300pxj;
+}
+
+@media screen and (max-width:360px){
+    .mini_content{
+        font-size: 50px;
+    }
 }
 
 .subtitle{

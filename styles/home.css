@@ -36,6 +36,15 @@ html,body{
     font-family: erosion;
 }
 
+@font-face{
+    src: url(../assets/fonts/CAMPUS\ PERSONAL\ USE.ttf);
+    font-family: campus;
+}
+@font-face{
+    src: url(../assets/fonts/Bebas-Regular.otf);
+    font-family: bebas;
+}
+
 .nav_bar{
     width:100%;
     height:40px;
@@ -53,6 +62,14 @@ html,body{
     }
 }
 
+@media screen and (max-width:375px){
+    .nav_bar{
+        height: 40px;
+        padding-top: 2.5px;
+        padding-right: 5px;
+    }
+}
+
 li.data{
     list-style-type: none;
     margin-top: 5px;
@@ -61,7 +78,7 @@ li.data{
 .data{
     color:white;
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: bebas;
     display: inline;
     margin-left: 10px;
 }
@@ -70,12 +87,13 @@ li.data{
     float: left;
 }
 
-.platform{
-    font-family: erosion;
-    padding-top: 3px;
-}
+/* @media screen and (max-width:360px){
+    .platform{
+        display: none;
+    }
+} */
 
-@media screen and (max-width:360px){
+@media screen and (max-width:480px){
     .platform{
         display: none;
     }
@@ -91,21 +109,43 @@ li.data{
     margin-left: 10px;
     margin-top:1.5px;
     padding-left: 5px;
-    font-family: lato;
-    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
 }
 
 .search::placeholder{
     color: rgb(207, 205, 205);
 }
 
+.search:hover::placeholder{
+    color: #41E894;
+}
+
+@media screen and (max-width:320px){
+    input.search{
+        width:170px
+    }
+}
+
 @media screen and (max-width:360px){
     input.search{
         height: 27px;
-        width: 200px;
+        width: 190px;
         margin-top: -1.5px;
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
+    }
+}
+
+@media screen and (max-width:375px){
+    input.search{
+        width: 190px;
+    }
+}
+
+@media screen and (max-width:480px){
+    input.search{
+        width: 130px;
     }
 }
 
@@ -122,12 +162,27 @@ li.data{
     margin-top: 1.5px;
 }
 
+@media screen and (max-width:320px){
+    .go_btn{
+        width: 45px;
+    }
+}
+
 @media screen and (max-width:360px){
     .go_btn{
         height: 27px;
+        width: 50px;
         margin-top: -1.5px;
         border-top-right-radius: 2px;
         border-bottom-right-radius: 3px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .go_btn{
+        width: 40px;
+        font-size: 12px;
+        padding: 0;
     }
 }
 
@@ -136,12 +191,18 @@ li.data{
     margin-right:5px;
 }
 
+@media screen and (max-width:360px){
+    .right{
+        margin-right: 0;
+    }
+}
+
 .newsletter, .measurement_navlink, .cutting_navlink, .trends_navlink{
     margin-top: 5px;
 }
 
-@media screen  and (max-width:360px){
-    .newsletter, .measurement_navlink, .cutting_navlink, .trends_navlink{
+@media screen and (max-width:480px){
+    .cutting_navlink, .trends_navlink{
         display: none;
     }
 }
@@ -171,20 +232,6 @@ a{
     }
 }
 
-@media screen and (max-width:360px){
-    .search{
-        width: 100px;
-    }
-
-    .go_btn{
-        width: 50px;
-    }
-
-    .right{
-        margin-right: 0;
-    }
-}
-
 
 .hero{
     margin-top: 40px;
@@ -192,35 +239,52 @@ a{
     background-size:cover;
     width: 100%;
     height: 600px;
-}
+} 
 
-@media screen and (max-width:360px){
+@media screen and (max-width:480px){
     .hero{
         background-position: -200px 0;
         height: 400px;
-        margin-top: 30px;
     }
 }
 
 .hero_ul{
     position: absolute;
-    top:35%;
+    top:25%;
+}
+
+@media screen and (max-width:480px){
+    .hero_ul{
+        top: 100px;
+        left: -1%;
+    }
 }
 
 li.bigger{
-    font-family: erosion;
+    font-family: bebas;
+    line-height: 1;
     font-size: 100px;
-    filter: drop-shadow(16px 16px 10px black);
+    filter: drop-shadow(10px 10px 10px black);
+    text-align: left;
+}
+
+@media screen and (max-width:320px){
+    li.bigger{
+        margin-right: 40px;
+    }
 }
 
 @media screen and (max-width:360px){
-
-    .hero_ul{
-        top: 200px;
-    }
-
     li.bigger{
-        font-size: 20%;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:480px){
+    li.bigger{
+        font-size: 80px;
+        text-align: left;
     }
 }
 
@@ -230,14 +294,7 @@ li.bigger{
     color: white;
     margin-top:10px;
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 6px;
-}
-
-@media screen and (max-width:360px){
-    li.bigger{
-        font-size: 40px;
-    }
 }
 
 .sub_label{
@@ -247,19 +304,31 @@ li.bigger{
     font-family: geosans;
     padding: 7px;
     border-radius: 20px;
-    font-weight: bold;
+}
+
+@media screen and (max-width:320px){
+    .sub_label{
+        width: 100%;
+        margin-left: -40px;
+    }
 }
 
 @media screen and (max-width:360px){
     .sub_label{
         height: 35px;
+        margin-left: -20px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .sub_label{
+        margin-left:0;   
     }
 }
 
 .side_menu{
     position: absolute;
     width: 25%;
-    height: 30%;
     top: 30px;
     right: 0.5%;
     background-color: whitesmoke;
@@ -274,7 +343,6 @@ li.bigger{
     .side_menu{
         margin-right: 0;
         width: 100%;
-        height: 75%;
         text-align: center;
     }
 }
@@ -301,9 +369,23 @@ li.bigger{
     list-style: none;
 }
 
+@media screen and (max-width:320px) and (orientation:landscape){
+    .tripple_card{
+        padding: 5px;
+    }
+}
+
 @media screen  and (max-width:360px){
     .tripple_card{
-        height: 1100px;
+        height: auto;
+        padding:5px;
+    }
+}
+
+@media screen  and (max-width:480px){
+    .tripple_card{
+        height: auto;
+        padding:5px;
     }
 }
 
@@ -318,6 +400,15 @@ li.bigger{
 }
 
 @media screen and (max-width:360px){
+    .card{
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width:480px){
     .card{
         float: none;
         width: 100%;
@@ -353,6 +444,21 @@ li.bigger{
 }
 
 @media screen and (max-width:360px){
+    .card_link_btn{
+        float: right;
+    }
+
+    .measurement_link{
+        margin-top: -800px;
+        z-index: 2;
+    }
+
+    .cutting_link{
+        margin-top: -400px;
+    }
+}
+
+@media screen and (max-width:480px){
     .card_link_btn{
         float: right;
     }
@@ -426,24 +532,53 @@ li.bigger{
     }
 }
 
+
+@media screen and (max-width:480px){
+    .article_topic{
+        font-size: 50px;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 200px;
+    }
+
+    .social_media{
+        display: block;
+        margin-top: 0;
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
 section.article{
-    height: 900px;
+    height: auto;
     width: 60%;
-    margin-top: 5px;
+    margin-top: 20px;
     margin-left: 20%;
     background-color: white;
     font-size: 20px;
     font-family: lato;
     line-height: 1.5;
     text-align: justify;
-    padding: 10px;
+    padding: 15px;
+
 }
+
+/* think of removing this one later and others like this */
 
 @media screen and (max-width:360px){
     section.article{
         width: 95%;
         margin-left: 2.5%;
         margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:480px){
+    section.article{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 30px;
     }
 }
 
@@ -475,7 +610,7 @@ blockquote{
 @media screen and (max-width:360px){
     .author{
         margin-left: 2%;
-        margin-top: 1350px;
+        margin-top: 50px;
     }
 }
 
@@ -488,6 +623,13 @@ blockquote{
 }
 
 @media screen and (max-width:360px){
+    .comments_section{
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+@media screen and (max-width:480px){
     .comments_section{
         width: 95%;
         margin-left: 2.5%;
@@ -573,9 +715,8 @@ blockquote{
     width: 25%;
     height: 300px;
     margin-top: 70px;
-    float: right;
-    margin-left: 10px;
-    margin-right: 0;
+    float: left;
+    margin-left: 11%;
     font-family: lato;
     font-weight: bold;
     line-height: 50px;
@@ -587,10 +728,34 @@ blockquote{
     color: black;
 }
 
-@media screen and (max-width:360px){
+.first{
+    margin-left: 5%;
+}
 
+.second{
+    margin-left: 12%;
+}
+
+.third{
+    margin-left: 8%;
+    margin-right:0;
+}
+
+@media screen and (max-width:360px){
     .blog_footer{
         display: none;
     }
 
+}
+@media screen and (max-width:375px){
+    .blog_footer{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:480px){
+    .footer{
+        margin-left: 0;
+    }
 }

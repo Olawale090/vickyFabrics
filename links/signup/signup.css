@@ -3,6 +3,15 @@ body{
     background-size: cover;
     background-color: rgb(32, 32, 32);
     background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+@media screen and (max-width:360px){
+    body{
+        background-position: -100px 0;
+    }
 }
 
 .form_block{
@@ -13,12 +22,30 @@ body{
     padding-top: 200px;
 }
 
+
+@media screen and (max-width:360px){
+    .form_block{
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+        padding-top: 200px;
+    }
+}
+
+
 .signup_news{
     margin-left: 180px;
     color: white;
     font-size: 30px;
     font-family: erosion;
 }
+
+@media screen and (max-width:360px){
+    .signup_news{
+        margin-left: 90px;
+    }
+}
+
 
 input{
     width: 60%;
@@ -28,6 +55,13 @@ input{
     border-radius: 5px;
     border:solid 1px gray;
     padding-left: 5px;
+}
+
+@media screen and (max-width:360px){
+    input{
+        width:98%;
+        margin-left: 1%;
+    }
 }
 .submit{
     background-color: #41E894;
