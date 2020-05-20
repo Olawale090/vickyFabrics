@@ -553,7 +553,7 @@ li.bigger{
     }
 }
 
-@media (min-width:640px),(max-width:720px){
+@media screen and (max-width:720px) and (min-width:640px){
     .card_link_btn{
         float: right;
     }
