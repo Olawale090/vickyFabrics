@@ -1,3 +1,5 @@
+/* please avoid adding more one screen in the media query, the result may be weird and unexpected*/
+
 html,body{
     margin:0;
 }
@@ -52,6 +54,7 @@ html,body{
     top:0;
     background-color: #41E894;
     z-index: 2;
+    padding-right: 5px;
 }
 
 @media screen and (max-width:360px){
@@ -67,6 +70,13 @@ html,body{
         height: 40px;
         padding-top: 2.5px;
         padding-right: 5px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .nav_bar{
+        top: 0;
+        margin-right: 2px;
     }
 }
 
@@ -86,12 +96,6 @@ li.data{
 .left{
     float: left;
 }
-
-/* @media screen and (max-width:360px){
-    .platform{
-        display: none;
-    }
-} */
 
 @media screen and (max-width:480px){
     .platform{
@@ -145,7 +149,7 @@ li.data{
 
 @media screen and (max-width:480px){
     input.search{
-        width: 130px;
+        width: 200px;
     }
 }
 
@@ -201,8 +205,32 @@ li.data{
     margin-top: 5px;
 }
 
+@media screen and (max-width:320px){
+    .newsletter, .cutting_navlink, .trends_navlink{
+        display: none;
+    }
+}
+
+@media screen and (max-width:360px){
+    .newsletter, .measurement_navlink, .cutting_navlink, .trends_navlink{
+        display: none;
+    }
+}
+
+@media screen and (max-width:375px){
+    .newsletter, .measurement_navlink, .cutting_navlink, .trends_navlink{
+        display: none;
+    }
+}
+
 @media screen and (max-width:480px){
-    .cutting_navlink, .trends_navlink{
+    .newsletter, .cutting_navlink, .trends_navlink{
+        display: none;
+    }
+}
+
+@media screen and (max-width:720px){
+    .newsletter, .cutting_navlink, .trends_navlink{
         display: none;
     }
 }
@@ -227,7 +255,8 @@ a{
     }
 
     .menu_icon{
-        margin-right: 300px;
+        margin-right: 10px;
+        margin-top: 5px;
         z-index: 3;
     }
 }
@@ -241,9 +270,16 @@ a{
     height: 600px;
 } 
 
+@media screen and (max-width:360px){
+    .hero{
+        margin-top: 30px;
+        height: 500px;
+    }
+}
+
 @media screen and (max-width:480px){
     .hero{
-        background-position: -200px 0;
+        background-position: -100px 0;
         height: 400px;
     }
 }
@@ -251,6 +287,12 @@ a{
 .hero_ul{
     position: absolute;
     top:25%;
+}
+
+@media screen and (max-width:360px){
+    .hero_ul{
+        left: -3%;
+    }
 }
 
 @media screen and (max-width:480px){
@@ -270,13 +312,14 @@ li.bigger{
 
 @media screen and (max-width:320px){
     li.bigger{
+        font-size: 50px;
         margin-right: 40px;
     }
 }
 
 @media screen and (max-width:360px){
     li.bigger{
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
     }
 }
@@ -316,7 +359,7 @@ li.bigger{
 @media screen and (max-width:360px){
     .sub_label{
         height: 35px;
-        margin-left: -20px;
+        /* margin-left: -20px; */
     }
 }
 
@@ -327,21 +370,37 @@ li.bigger{
 }
 
 .side_menu{
-    position: absolute;
+    position: fixed;
     width: 25%;
     top: 30px;
     right: 0.5%;
     background-color: whitesmoke;
     z-index: 1;
+    transition: 0.5s;
     list-style-type: none;
-    opacity: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
 }
 
 @media screen and (max-width:360px){
     .side_menu{
         margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:720px){
+    .side_menu{
+        right: 0;
         width: 100%;
         text-align: center;
     }
@@ -389,6 +448,13 @@ li.bigger{
     }
 }
 
+@media screen  and (max-width:720px){
+    .tripple_card{
+        height: auto;
+        padding:5px;
+    }
+}
+
 .card{
     width: 25%;
     height: 300px;
@@ -408,11 +474,19 @@ li.bigger{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:480px) and (orientation:portrait){
     .card{
-        float: none;
+        float: inline;
         width: 100%;
         margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width:720px) and (min-width:640px){
+    .card{
+        width: 40%;
+        margin-left: 50px;
         margin-right: 0;
     }
 }
@@ -429,6 +503,12 @@ li.bigger{
 
 .sewing{
     background-image: url(../assets/pics/person-holding-sewing-machine-2973392\ \(1\).jpg);
+}
+
+@media (max-width:720px) and (min-width:640px){
+    .sewing{
+        margin-left: 30%;
+    }
 }
 
 .card_link_btn{
@@ -470,6 +550,27 @@ li.bigger{
 
     .cutting_link{
         margin-top: -400px;
+    }
+}
+
+@media (min-width:640px),(max-width:720px){
+    .card_link_btn{
+        float: right;
+    }
+
+    .measurement_link{
+        margin-top: -400px;
+        margin-right: 375px;
+        z-index: 2;
+    }
+
+    .cutting_link{
+        margin-top: -400px;
+        margin-right: 42px;
+    }
+
+    .techniques_link{
+        margin-right: 213px;
     }
 }
 
@@ -550,6 +651,24 @@ li.bigger{
     }
 }
 
+@media screen and (max-width:720px){
+    .article_topic{
+        font-size: 50px;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 900px;
+        text-align: center;
+    }
+
+    /* .social_media{   
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    } */
+}
+
+
+
 section.article{
     height: auto;
     width: 60%;
@@ -592,6 +711,13 @@ blockquote{
     blockquote{
         width: 95%;
         margin-left: 2.5%;
+    }
+}
+
+@media screen and (max-width:480px){
+    blockquote{
+        width: 98%;
+        margin-left: 1%;
     }
 }
 
@@ -755,7 +881,7 @@ blockquote{
 }
 
 @media screen and (max-width:480px){
-    .footer{
-        margin-left: 0;
-    }
-}
+    .first{
+        margin-left: 5%;
+    }  
+} 
