@@ -1,4 +1,3 @@
-/* please avoid adding more one screen in the media query, the result may be weird and unexpected*/
 
 html,body{
     margin:0;
@@ -97,97 +96,8 @@ li.data{
     float: left;
 }
 
-@media screen and (max-width:480px){
-    .platform{
-        display: none;
-    }
-}
-
-
-.search{
-    width:300px;
-    height:35px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: none;
-    margin-left: 10px;
-    margin-top:1.5px;
-    padding-left: 5px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15px;
-}
-
-.search::placeholder{
-    color: rgb(207, 205, 205);
-}
-
-.search:hover::placeholder{
-    color: #41E894;
-}
-
-@media screen and (max-width:320px){
-    input.search{
-        width:170px
-    }
-}
-
-@media screen and (max-width:360px){
-    input.search{
-        height: 27px;
-        width: 190px;
-        margin-top: -1.5px;
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-    }
-}
-
-@media screen and (max-width:375px){
-    input.search{
-        width: 190px;
-    }
-}
-
-@media screen and (max-width:480px){
-    input.search{
-        width: 200px;
-    }
-}
-
-.go_btn{
-    width: 55px;
-    height: 35px;
-    background-color: #ff7f50;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    color: white;
-    margin-left: 0;
-    margin-top: 1.5px;
-}
-
-@media screen and (max-width:320px){
-    .go_btn{
-        width: 45px;
-    }
-}
-
-@media screen and (max-width:360px){
-    .go_btn{
-        height: 27px;
-        width: 50px;
-        margin-top: -1.5px;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 3px;
-    }
-}
-
-@media screen and (max-width:480px){
-    .go_btn{
-        width: 40px;
-        font-size: 12px;
-        padding: 0;
-    }
+.platform{
+    display: inline;
 }
 
 .right{
@@ -205,6 +115,10 @@ li.data{
     margin-top: 5px;
 }
 
+.newsletter:hover{
+    cursor: pointer;
+}
+
 @media screen and (max-width:320px){
     .newsletter, .cutting_navlink, .trends_navlink{
         display: none;
@@ -223,14 +137,32 @@ li.data{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:480px) and (min-width:376px) {
     .newsletter, .cutting_navlink, .trends_navlink{
         display: none;
     }
 }
 
-@media screen and (max-width:720px){
+@media screen and (max-width:639px) and (min-width:481px){
+    .newsletter, .measurement_navlink, .cutting_navlink, .trends_navlink{
+        display: none;
+    }
+}
+
+@media screen and (max-width:815px) and (min-width:640px){
     .newsletter, .cutting_navlink, .trends_navlink{
+        display: none;
+    }
+}
+
+@media screen and (max-width:887px) and (min-width:816px){
+    .newsletter, .cutting_navlink{
+        display: none;
+    }
+}
+
+@media screen and (max-width:987px) and (min-width:887px){
+    .newsletter{
         display: none;
     }
 }
@@ -245,19 +177,47 @@ a{
 }
 
 .menu_icon{
-    display: inline;
+    display: none;
 }
 
-@media screen and (max-width:360px){
+@media screen and (max-width:320px){
+
+    .bus_icon,.menu_icon{
+        height: 30px;
+        width: 30px; 
+    }
+
+    .bus_icon{
+        margin-top: 5px;
+    }
+
+    .menu_icon{
+        margin-right: 10px;
+        margin-top: 5px;
+       
+    }
+}
+
+@media screen and (max-width:360px) and (min-width:321px){
     .bus_icon,.menu_icon{
         height: 22px;
         width: 22px; 
+    }
+
+    .bus_icon{
+        margin-top: 5px;
     }
 
     .menu_icon{
         margin-right: 10px;
         margin-top: 5px;
         z-index: 3;
+    }
+}
+
+@media screen and (max-width:990px){
+    .menu_icon{
+        display: inline;
     }
 }
 
@@ -268,16 +228,9 @@ a{
     background-size:cover;
     width: 100%;
     height: 600px;
-} 
-
-@media screen and (max-width:360px){
-    .hero{
-        margin-top: 30px;
-        height: 500px;
-    }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:720px){
     .hero{
         background-position: -100px 0;
         height: 400px;
@@ -295,7 +248,7 @@ a{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:480px) and (min-width:361px) {
     .hero_ul{
         top: 100px;
         left: -1%;
@@ -312,22 +265,29 @@ li.bigger{
 
 @media screen and (max-width:320px){
     li.bigger{
-        font-size: 50px;
-        margin-right: 40px;
-    }
-}
-
-@media screen and (max-width:360px){
-    li.bigger{
-        font-size: 20px;
+        font-size: 60px;
+        margin-left: -30px;
         text-align: center;
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:360px) and (min-width:321px){
+    li.bigger{
+        font-size: 60px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:499px) and (min-width:361px){
+    li.bigger{
+        font-size: 70px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:641px) and (min-width:500px){
     li.bigger{
         font-size: 80px;
-        text-align: left;
     }
 }
 
@@ -352,18 +312,17 @@ li.bigger{
 @media screen and (max-width:320px){
     .sub_label{
         width: 100%;
-        margin-left: -40px;
+        height: 35px;
     }
 }
 
-@media screen and (max-width:360px){
+@media screen and (max-width:360px) and (min-width:321px){
     .sub_label{
         height: 35px;
-        /* margin-left: -20px; */
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:499px) and (min-width:375px) {
     .sub_label{
         margin-left:0;   
     }
@@ -372,30 +331,33 @@ li.bigger{
 .side_menu{
     position: fixed;
     width: 25%;
-    top: 30px;
+    top: 40px;
     right: 0.5%;
     background-color: whitesmoke;
-    z-index: 1;
+    z-index: 2;
     transition: 0.5s;
     list-style-type: none;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    padding-top: 5px;
+}
+
+.side_menu::before{
+    content: '';
+    background-color: whitesmoke;
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -10px;
+    right: 20px;
 }
 
 .hide{
     opacity: 0;
+    pointer-events: none;
 }
 
 .show{
     opacity: 1;
-}
-
-@media screen and (max-width:360px){
-    .side_menu{
-        margin-right: 0;
-        width: 100%;
-        text-align: center;
-    }
 }
 
 @media screen and (max-width:720px){
@@ -407,53 +369,258 @@ li.bigger{
 }
 
 .menulist{
-    margin-top: 0;
     width: 100%;
-    margin-left: 10px;
     color: black;
+    padding: 5px;
     font-size: 20px;
     text-align: center;
     font-family: lato;
     transition: 0.3s;
+    
+}
+
+.menulist a{
+    color:#303030;
+}
+
+.newsletter:hover{
+    border-radius: 5px;
 }
 
 .menulist:hover{
-    color: #41E894;
+    color: rgb(73, 73, 73);
+    border-bottom:solid 5px #41E894;
+    padding-bottom: 5px;
 }
+
+/* begining of form style NOTICE: NO MEDIA QUERY IS WRITTEN YET */
+
+.form_carpet{
+    width: 100%;
+    height: 100%;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.685);
+    position: fixed;
+    
+}
+
+.form_close_btn{
+    background-color: rgba(250, 19, 19, 0);
+    color: #ff7f50;
+    border: none;
+    position: absolute;
+    padding: 5px;
+    top: 8%;
+    right: 2%;
+    width: 2.5%;
+    height: 6%;
+}
+
+@media screen and (max-width:600px) and (min-width:150px){
+    .form_close_btn{
+        right:20%;
+        top:15%
+    }
+}
+
+
+@media screen and (max-width:980px) and (min-width:601px){
+    .form_close_btn{
+        right:20%;
+        top:15%
+    }
+}
+
+.form_close_btn:hover{
+    cursor: pointer;
+}
+
+.subscriber{
+    position: fixed;
+    width:50%;
+    height: 60%;
+    top:20%;
+    background-color: rgb(236, 236, 236);
+    background-image: url(../assets/pics/woman-in-white-long-sleeve-shirt-sketching-on-white-printer-3984842.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-blend-mode: multiply;
+    border-radius: 5px;
+    z-index: 2;
+    left:25%;
+    transition: .5s;
+}
+
+@media screen and (max-width:600px) and (min-width:150px){
+    .subscriber{
+        width:90%;
+        left:5%;
+        height: 40%;
+    }
+}
+
+@media screen and (max-width:980px) and (min-width:601px){
+    .subscriber{
+        width:80%;
+        left:10%;
+        height: 50%;
+    }
+}
+
+.formTitle{
+    font-family: bebas;
+    font-size: 40px;
+    background-color: #303030;
+    color: rgb(255, 255, 255);
+    padding-top: 1px;
+    text-align: center;
+    width: 100%;
+    height: 15%;
+}
+
+@media screen and (max-width:600px) and (min-width:150px){
+    .formTitle{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:980px) and (min-width:601px){
+    .formTitle{
+        font-size: 20px;
+    }
+}
+
+.formUsername{
+    margin-top: 100px;
+}
+
+.formUsername, .formEmail{
+    width: 80%;
+    height: 11%;
+    background-color: #ebebeb;
+    border: none;
+    padding-left: 10px;
+    margin-left: 10%;
+    font-size: medium;
+}
+
+
+
+.formEmail{
+    margin-top: 5px;
+}
+
+.formSubmit{
+    width:30%;
+    height:11%;
+    border: none;
+    margin-top: 10px;
+    margin-left: 35%;
+    background-color: #ff7f50;
+    color: white;
+    font-family: lato;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.submit_notice{
+    background-color: #303030;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    color: #ebebeb;
+    padding: 8px;
+    margin-top: 42px;
+    font-family: lato;
+}
+
+@media screen and (max-width:600px) and (min-width:150px){
+    .formUsername{
+        margin-top: 20px;
+        height: 15%;
+    }
+    
+    .formEmail{
+        margin-top: 10px;
+        height: 15%;
+    }
+
+    .formSubmit{
+        margin-top: 15px;
+        height: 15%;
+    }
+
+    .submit_notice{
+        margin-top: 15px;
+        height: 12%;
+        padding:0;
+    }
+}
+
+@media screen and (max-width:980px) and (min-width:601px){
+    .formUsername{
+        margin-top: 20px;
+        height: 15%;
+    }
+    
+    .formEmail{
+        margin-top: 10px;
+        height: 15%;
+    }
+
+    .formSubmit{
+        margin-top: 15px;
+        height: 15%;
+    }
+
+    .submit_notice{
+        margin-top: 15px;
+        height: 12%;
+        padding:0;
+    }
+}
+
 
 .tripple_card{
     width: 100%;
     height: 500px;
     background-color: white;
     list-style: none;
+    margin-bottom: 10px;
 }
 
-@media screen and (max-width:320px) and (orientation:landscape){
+
+/* @media screen  and (max-width:360px){
     .tripple_card{
+        height: auto;
+        padding:5px;
+    }
+}
+
+@media screen  and (max-width:499px) and (min-width:361px){
+    .tripple_card{
+        height: auto;
+        padding:5px;
+    }
+}
+
+@media screen and (max-width:641px) and (min-width:500px){
+    .tripple_card{
+        height: auto;
         padding: 5px;
     }
-}
 
-@media screen  and (max-width:360px){
+    and (min-width:640px)
+} */
+
+@media screen  and (max-width:720px) {
     .tripple_card{
         height: auto;
         padding:5px;
     }
 }
 
-@media screen  and (max-width:480px){
-    .tripple_card{
-        height: auto;
-        padding:5px;
-    }
-}
 
-@media screen  and (max-width:720px){
-    .tripple_card{
-        height: auto;
-        padding:5px;
-    }
-}
 
 .card{
     width: 25%;
@@ -462,7 +629,14 @@ li.bigger{
     margin-left: 85px;
     margin-top: 100px;
     float: left;
-    box-shadow: 2px 2px 10px 5px rgb(204, 204, 204);
+    box-shadow: 2px 2px 10px 2px rgb(233, 233, 233);
+    transition: background-color .5s;
+}
+
+.card:hover{
+    cursor: pointer;
+    background-color: rgb(211, 211, 211);
+    background-blend-mode: multiply;
 }
 
 @media screen and (max-width:360px){
@@ -474,7 +648,7 @@ li.bigger{
     }
 }
 
-@media screen and (max-width:480px) and (orientation:portrait){
+@media screen and (max-width:480px) and (min-width:361px){
     .card{
         float: inline;
         width: 100%;
@@ -483,32 +657,59 @@ li.bigger{
     }
 }
 
-@media (max-width:720px) and (min-width:640px){
+@media screen and (max-width:641px) and (min-width:481px){
     .card{
-        width: 40%;
-        margin-left: 50px;
-        margin-right: 0;
+        width:70%;
+        margin-left: 15%;
     }
 }
 
-.measurement,.cutting,.sewing{
+@media screen and (max-width:860px) and (min-width:640px){
+    .card{
+        width: 30%;
+        margin-left: 2.5%;
+    }
+}
+
+@media screen and (max-width:1019px) and (min-width:861px){
+    .card{
+        width: 30%;
+        margin-left: 2.5%;
+    }
+}
+
+@media screen and (min-width:1020px) {
+    .card{
+        width: 30%;
+        margin-left: 2.5%;
+    }
+}
+
+.measurement{
     background-image: url(../assets/pics/fabric-scissors-needle-needles-scissors-461035\ \(1\).jpg);
+}
+
+.measurement,.cutting,.techniques,.sewing,.fashiontrends{
     background-size: cover;
     background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.fashiontrends{
+    background-image: url("../assets/pics/close-up-photo-of-three-sweatshirts-1030946.jpg");
+}
+
+.sewing{
+    background-image: url("../assets/pics/woman-sewing-while-sitting-on-chair-3738088\ \(1\).jpg");
+    background-position-x: -40px;
 }
 
 .cutting{
     background-image: url(../assets/pics/woman-in-red-long-sleeve-dress-holding-a-scissors-3738076\ \(1\).jpg);
 }
 
-.sewing{
-    background-image: url(../assets/pics/person-holding-sewing-machine-2973392\ \(1\).jpg);
-}
-
-@media (max-width:720px) and (min-width:640px){
-    .sewing{
-        margin-left: 30%;
-    }
+.techniques{
+    background-image: url('../assets/pics/person-sketching-dress-on-printer-paper-with-clip-board-1478477.jpg');
 }
 
 .card_link_btn{
@@ -530,7 +731,6 @@ li.bigger{
 
     .measurement_link{
         margin-top: -800px;
-        z-index: 2;
     }
 
     .cutting_link{
@@ -538,7 +738,7 @@ li.bigger{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:499px) and (min-width:361px){
     .card_link_btn{
         float: right;
     }
@@ -553,30 +753,58 @@ li.bigger{
     }
 }
 
-@media screen and (max-width:720px) and (min-width:640px){
+@media screen and (max-width:639px) and (min-width:481px){
     .card_link_btn{
         float: right;
+        margin-right: 15%;
     }
 
     .measurement_link{
-        margin-top: -400px;
-        margin-right: 375px;
-        z-index: 2;
+        margin-top: -800px;
+        
     }
 
     .cutting_link{
         margin-top: -400px;
-        margin-right: 42px;
-    }
-
-    .techniques_link{
-        margin-right: 213px;
     }
 }
 
+@media screen and (max-width:720px) and (min-width:640px){
+    .card_link_btn{
+        float: left;
+        margin-left: 2.5%;
+    }
+
+    .measurement_link{
+        margin-top: 0;
+        
+    }
+
+    .cutting_link{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:860px) and (min-width:721px){
+    .card_link_btn{
+        float: left;
+        margin-left: 2.5%;
+    }
+
+    .measurement_link{
+        margin-top: 0;
+        
+    }
+
+    .cutting_link{
+        margin-top: 0;
+    }
+}
+
+
 .article_topic{
     width: 60%;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 20%;
     font-size: 100px;
     font-family: bitcrusher;
@@ -621,7 +849,7 @@ li.bigger{
         font-size: 50px;
         width: 95%;
         margin-left: 2.5%;
-        margin-top: 200px;
+        margin-top: 0;
     }
 
     .social_media{
@@ -634,12 +862,12 @@ li.bigger{
 }
 
 
-@media screen and (max-width:480px){
+@media screen and (max-width:639px) and (min-width:361px){
     .article_topic{
         font-size: 50px;
         width: 95%;
         margin-left: 2.5%;
-        margin-top: 200px;
+        margin-top: 1300px;
     }
 
     .social_media{
@@ -651,20 +879,18 @@ li.bigger{
     }
 }
 
-@media screen and (max-width:720px){
+@media screen and (max-width:850px) and (min-width:640px){
     .article_topic{
-        font-size: 50px;
-        width: 95%;
-        margin-left: 2.5%;
-        margin-top: 900px;
+        font-size: 70px;
+        width: 98%;
+        margin-left: 1%;
+        margin-top: 10px;
         text-align: center;
     }
 
-    /* .social_media{   
-        margin-right: 10px;
-        width: 40px;
-        height: 40px;
-    } */
+    .social_media{   
+        display:none;
+    }
 }
 
 
@@ -693,11 +919,25 @@ section.article{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:599px) and (min-width:361px){
     section.article{
         width: 95%;
         margin-left: 2.5%;
         margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:720px) and (min-width:600px){
+    section.article{
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+@media screen and (max-width:850px) and (min-width:721px){
+    section.article{
+        width:80%;
+        margin-left: 10%;
     }
 }
 
@@ -740,12 +980,44 @@ blockquote{
     }
 }
 
+.main_loader{
+    width: 10em;
+    height: .3em;
+    border-radius: 10px;
+    background-color: #303030;
+    margin-top: 20px;
+    margin-left:40%;
+    display: none;
+}
+
+.main_loader::after{
+    content: '';
+    height: .3em;
+    border-radius: 10px;
+    background-color: #41E894;
+    position: absolute;
+    animation-name: popular;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.005s;
+    animation-delay: 0;
+}
+
+@keyframes popular{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 10em;
+    }
+}
+
 .comments_section{
     width: 60%;
     padding: 10px;
     margin-left: 20%;
     margin-top: 40px;
-    background-color: whitesmoke;
 }
 
 @media screen and (max-width:360px){
@@ -755,7 +1027,7 @@ blockquote{
     }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:499px) and (min-width:361px) {
     .comments_section{
         width: 95%;
         margin-left: 2.5%;
@@ -764,10 +1036,12 @@ blockquote{
 
 .comment_box{
     width:100%;
-    height:150px;
+    height:50px;
     padding: 10px;
     font-family: lato;
-    font-size: larger;
+    font-size: medium;
+    overflow-y: auto;
+    border:solid #41E894 1px;
 }
 
 .submit_btn{
@@ -777,6 +1051,7 @@ blockquote{
     color: white;
     font-family: lato;
     border: none;
+    margin-top: 20px;
     font-size: 15px;
     font-weight: bold;
 }
@@ -784,7 +1059,6 @@ blockquote{
 .commentators{
     width: 100%;
     margin-top: 20px;
-    background-color: white;
     padding-top: 2.5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -798,12 +1072,12 @@ blockquote{
 
 .comment_name{
     width: 100%;
-    height: 50px;
+    height: auto;
     font-size: large;
-    background-color: #EEEEEE;
     padding:5px;
     margin-top: 10px;
-    border-radius: 3px;
+    border-radius: 3px 3px 0 0;
+    background-color: #ebebeb;
     font-family: lato;
     font-weight: bold;
 }
@@ -815,12 +1089,12 @@ blockquote{
 }
 
 .comment_post{
-    margin-top: 5px;
     width: 100%;
     padding: 5px;
-    background-color: whitesmoke;
-    border-radius: 3px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 0 0 3px 3px;
     font-family: lato;
+    overflow: auto;
 }
 
 .blog_footer{
@@ -867,21 +1141,8 @@ blockquote{
     margin-right:0;
 }
 
-@media screen and (max-width:360px){
+@media screen and (max-width:580px){  
     .blog_footer{
         display: none;
     }
-
 }
-@media screen and (max-width:375px){
-    .blog_footer{
-        display: none;
-    }
-
-}
-
-@media screen and (max-width:480px){
-    .first{
-        margin-left: 5%;
-    }  
-} 

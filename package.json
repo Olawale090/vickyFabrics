@@ -1,0 +1,31 @@
+{
+  "name": "content_blogger",
+  "version": "1.0.0",
+  "description": "blogging website",
+  "main": "pwabuilder-sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olawale090/vickyFabrics.git"
+  },
+  "keywords": [
+    "vicky",
+    "blog",
+    "vickyFab",
+    "vickyfabrics",
+    "fabrics",
+    "tutorial",
+    "sewing",
+    "tailoring",
+    "tailoring",
+    "tutorial"
+  ],
+  "author": "Engr. Olawale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olawale090/vickyFabrics/issues"
+  },
+  "homepage": "https://github.com/Olawale090/vickyFabrics#readme"
+}

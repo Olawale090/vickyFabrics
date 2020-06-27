@@ -1,4 +1,4 @@
-@media screen and (max-width:360px){
+@media screen and (max-width:850px){
     .article_topic{
         margin-top: 40px;
     }
@@ -16,7 +16,7 @@
 .mini_content{
     width: 100%;
     font-family: erosion;
-    font-size:80px;
+    font-size: 3.5rem;
     text-align: center;
     color: coral;
     margin-top: 300pxj;
@@ -39,6 +39,11 @@ a{
     text-decoration: none;
 }
 
+.cutting_navlink{
+    color: #ff7f50 ;
+    border-bottom: solid 2px coral;
+}
+
 .products{
     color:white;
     background-color:rgb(65, 118, 232);
@@ -50,6 +55,4 @@ a{
     margin-top: -20px;
 }
 
-.techniques{
-    background-image: url('../../assets/pics/woman-in-red-long-sleeve-dress-holding-a-scissors-3738076\ \(1\).jpg');
-}
+

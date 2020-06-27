@@ -6,8 +6,19 @@
     <link rel="stylesheet" href="../../styles/home.css">
     <link rel="stylesheet" href="../cutting/cutting.css">
     <link rel="shortcut icon" href="../../assets/icons/042-sew-5.png" type="image/x-icon">
-    <script type="module" async src="../../script/javascript/app.js"></script>
+    <script type="module" async src="measurement.js"></script>
     <link rel="manifest" href="../../manifest.json">
+    <style>
+        .cutting_navlink{
+            color: white;
+            border: none;
+        }
+
+        .measurement_navlink{
+            color: coral;
+            border-bottom: solid 2px coral;
+        }
+    </style>
     <title>VickyFabrics</title>
 </head>
 <body>
@@ -15,24 +26,33 @@
     <div class="nav_bar">
         <img src="../../assets/icons/042-sew-5.png" alt="avatar" class="left data bus_icon">
         <li class="left data platform"> VickyFabrics </li>
-        <input type="text" name="" id="" class="left search" placeholder="Search here ">
-        <button type="submit" name="" id="" class="left search go_btn"> Search </button>
-        
         <img src="../../assets/icons/042-menu.svg" alt="" class="right data menu_icon">
         <a href="../measurement/measurement.htm" class="right data measurement_navlink" target="_blank">Measurement</a>
         <a href="../fashion_trends/fashion_trends.htm" class="right data trends_navlink" target="_blank">Fashion trends</a> 
         <a href="../cutting/cutting.htm" class="right data cutting_navlink" target="_blank">Cutting</a>
-        <a href="../signup/signup.htm" class="right data newsletter" target="_blank">Newsletter</a>
+        <li class="right data newsletter">Newsletter</li>
     </div>
 
     <section class="side_menu hide">
-        <p> <a href="#hero" class="menulist" target="_blank">Home</a> </p>
-        <p> <a href="../cutting/cutting.htm" class="menulist" target="_blank">Cutting</a> </p>  
-        <p> <a href="../fashion_trends/fashion_trends.htm" class="menulist" target="_blank">Fashion trends</a> </p>
-        <p> <a href="../`measurement/measurement.htm" class="menulist" target="_blank">Measurement</a> </p>
-        <p> <a href="../" class="menulist" target="_blank">Materials</a> </p>
-        <p> <a href="../signup/signup.htm" class="menulist" target="_blank">Signup</a> </p>
+        <li class="menulist"> <a href="../../index.htm"  target="_blank"> Home</a></li>
+        <li class="menulist"> <a href="../cutting/cutting.htm" target="_blank"> Cutting</a> </li>
+        <li class="menulist"> <a href="../fashion_trends/fashion_trends.htm"  target="_blank"> Fashion trends</a></li>
+        <li class="menulist"> <a href="../measurement/measurement.htm" target="_blank"> Measurement </a></li>
+        <li class="menulist"> <a href="links/" target="_blank"> Materials </a></li>
+        <li class="menulist newsletterSM"> Newsletter </li>
     </section>
+
+    <div class="form_carpet hide">
+        <button class="form_close_btn"> Close </button>
+        <form class="subscriber">
+            <div class="formTitle">Newsletter</div>
+            <input type="text" placeholder="Please enter your username" name="username" class="formUsername">
+            <input type="email" placeholder="Please enter your email" name="email" class="formEmail">
+            <button name="submit" class="formSubmit"> Submit </button>
+            <div class="submit_notice"> Please signup for our weekly innovative newsletter </div>
+        </form>
+    </div>
+
 
     <article id="measurement" class="article_topic">
      Principles of measurement<br>
@@ -91,30 +111,21 @@
             <h1>Comment</h1>
         </header>
 
-        <textarea type="text" placeholder="Please comment here " name="" id="" class="comment_box"> </textarea>
+        <textarea type="text" placeholder="Please comment here " name="measurementcomment" id="" class="comment_box"> </textarea>
         <br>
         <button type="submit" class="submit_btn"> Submit </button>
 
-        <div class="commentators">
-            <article class="comment_name">Username <li class="time">time</li></article>
+        <div class="main_loader common"></div>
 
-            <article class="comment_post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab asperiores doloremque, vero tenetur dignissimos hic aut veniam non, reiciendis animi dolore explicabo, laboriosam libero velit facere? Fugiat qui nobis aliquam.</article>
-
-            <article class="comment_name">Username <li class="time">time</li></article>
-
-            <article class="comment_post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab asperiores doloremque, vero tenetur dignissimos hic aut veniam non, reiciendis animi dolore explicabo, laboriosam libero velit facere? Fugiat qui nobis aliquam.</article>
-
-            <article class="comment_name">Username <li class="time">time</li></article>
-
-            <article class="comment_post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab asperiores doloremque, vero tenetur dignissimos hic aut veniam non, reiciendis animi dolore explicabo, laboriosam libero velit facere? Fugiat qui nobis aliquam.</article>
-        </div>
+        <div class="commentators"> </div>
+        
     </section>
 
     <div class="tripple_card">
-        <li class="card measurement"></li>
-        <li class="card techniques"></li>
-        <li class="card sewing"></li>
-        <a href="../measurement/measurement.htm" class="card_link_btn card  measurement_link">Measurement</a>
+        <li class="card fashiontrends" onclick="window.open('../fashion_trends/fashion_trends.htm')"></li>
+        <li class="card techniques" onclick="window.open('../advance_techniques/techniques.htm')"></li>
+        <li class="card sewing" onclick="window.open('../../index.htm')"></li>
+        <a href="../fashion_trends/fashion_trends.htm" class="card_link_btn card  trend_link measurement_link">Fahion trend</a>
         <a href="../advance_techniques/techniques.htm" class="card_link_btn card cutting_link">Techniques</a>
         <a href="../../index.htm" class="card_link_btn card techniques_link">Sewing</a>
     </div>
