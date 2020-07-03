@@ -98,6 +98,7 @@ class technique_comments{
         this.username = document.querySelector('.username');
         this.email = document.querySelector('.formEmail');
         this.commentPost = document.querySelector('.comment_box');
+        this.loader = document.querySelector('.main_loader');
     }
 
     passemail(event){
@@ -182,9 +183,6 @@ class technique_comments{
         xhr.onload = function () {
             if (this.status === 200) {
                 let comments = JSON.parse(this.responseText);
-                alert(comments);
-
-                
                 let commentBox = document.querySelector(".commentators"); 
                 let passer = '';
 
@@ -219,7 +217,8 @@ document.querySelector('.formSubmit').addEventListener('click',()=>{
 document.querySelector(".submit_btn").addEventListener('click', (e)=>{
     e.preventDefault();
     databaseSubmission.passcomments(event);
-    databaseSubmission.fetchcomments(event);
+    databaseSubmission.fetchcomments(event);    
+    
 },false);
 
 window.addEventListener('load', ()=>{

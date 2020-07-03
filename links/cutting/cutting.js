@@ -102,6 +102,7 @@ class cutting_comments{
         this.username = document.querySelector('.username');
         this.email = document.querySelector('.formEmail');
         this.commentPost = document.querySelector('.comment_box');
+        this.loader = document.querySelector('.main_loader');
     }
 
     passemail(event){

@@ -987,7 +987,7 @@ blockquote{
     background-color: #303030;
     margin-top: 20px;
     margin-left:40%;
-    display: none;
+    /* display: none; */
 }
 
 .main_loader::after{
@@ -999,7 +999,7 @@ blockquote{
     animation-name: popular;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    animation-duration: 0.005s;
+    animation-duration:1s;
     animation-delay: 0;
 }
 
