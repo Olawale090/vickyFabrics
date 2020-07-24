@@ -590,28 +590,7 @@ li.bigger{
 }
 
 
-/* @media screen  and (max-width:360px){
-    .tripple_card{
-        height: auto;
-        padding:5px;
-    }
-}
 
-@media screen  and (max-width:499px) and (min-width:361px){
-    .tripple_card{
-        height: auto;
-        padding:5px;
-    }
-}
-
-@media screen and (max-width:641px) and (min-width:500px){
-    .tripple_card{
-        height: auto;
-        padding: 5px;
-    }
-
-    and (min-width:640px)
-} */
 
 @media screen  and (max-width:720px) {
     .tripple_card{

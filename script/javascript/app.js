@@ -138,7 +138,7 @@ cardClicked.techniquesClicked();
 class newsletter_subscription extends gui_display{
     constructor(){
         super();
-        this.username = document.querySelector('.username');
+        this.username = document.querySelector('.formUsername');
         this.email = document.querySelector('.formEmail');
         this.commentPost = document.querySelector('.comment_box');
         this.commentusername = document.querySelector('#commentusername');
@@ -147,7 +147,7 @@ class newsletter_subscription extends gui_display{
 
     passemail(event){
         event.preventDefault();
-        let params = 'email=' + this.email.value;
+        let params = 'email=' + this.email.value + '&username= ' + this.username.value;
         const xhr = new XMLHttpRequest();
         
         xhr.open('POST','script/php/subscribe.php', true);
